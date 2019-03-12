@@ -11,17 +11,8 @@ exports.registerLanguage = function(monaco) {
     }
   });
 
-  // Define a new theme that contains only rules that match this language
-  monaco.editor.defineTheme('myCoolTheme', {
-    base: 'vs',
-    inherit: false,
-    rules: [
-      { token: 'role', foreground: 'ff0000', fontStyle: 'bold' },
-    ]
-  });
-
   // Register a completion item provider for the new language
-  monaco.languages.registerCompletionItemProvider('mySpecialLanguage', {
+  monaco.languages.registerCompletionItemProvider('novel', {
     provideCompletionItems: () => {
       var suggestions = [{
         label: 'simpleText',
@@ -47,5 +38,14 @@ exports.registerLanguage = function(monaco) {
       }];
       return { suggestions: suggestions };
     }
+  });
+
+   // Define a new theme that contains only rules that match this language
+  monaco.editor.defineTheme('myCoolTheme', {
+    base: 'vs',
+    inherit: false,
+    rules: [
+      { token: 'role', foreground: 'ff0000', fontStyle: 'bold' },
+    ]
   });
 }

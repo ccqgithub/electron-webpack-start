@@ -1,0 +1,290 @@
+.mac {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.mac:lang(zh-Hans) {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
+    "Hiragino Sans GB", sans-serif;
+}
+.mac:lang(zh-Hant) {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", sans-serif;
+}
+.mac:lang(ja) {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic Pro",
+    sans-serif;
+}
+.mac:lang(ko) {
+  font-family: -apple-system, BlinkMacSystemFont, "Nanum Gothic",
+    "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+
+.windows {
+  font-family: "Segoe WPC", "Segoe UI", sans-serif;
+}
+.windows:lang(zh-Hans) {
+  font-family: "Segoe WPC", "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+.windows:lang(zh-Hant) {
+  font-family: "Segoe WPC", "Segoe UI", "Microsoft Jhenghei", sans-serif;
+}
+.windows:lang(ja) {
+  font-family: "Segoe WPC", "Segoe UI", "Meiryo", sans-serif;
+}
+.windows:lang(ko) {
+  font-family: "Segoe WPC", "Segoe UI", "Malgun Gothic", "Dotom", sans-serif;
+}
+
+.linux {
+  font-family: "Ubuntu", "Droid Sans", sans-serif;
+}
+.linux:lang(zh-Hans) {
+  font-family: "Ubuntu", "Droid Sans", "Source Han Sans SC",
+    "Source Han Sans CN", "Source Han Sans", sans-serif;
+}
+.linux:lang(zh-Hant) {
+  font-family: "Ubuntu", "Droid Sans", "Source Han Sans TC",
+    "Source Han Sans TW", "Source Han Sans", sans-serif;
+}
+.linux:lang(ja) {
+  font-family: "Ubuntu", "Droid Sans", "Source Han Sans J", "Source Han Sans JP",
+    "Source Han Sans", sans-serif;
+}
+.linux:lang(ko) {
+  font-family: "Ubuntu", "Droid Sans", "Source Han Sans K", "Source Han Sans JR",
+    "Source Han Sans", "UnDotum", "FBaekmuk Gulim", sans-serif;
+}
+
+.mac {
+  --monaco-monospace-font: Monaco, Menlo, Inconsolata, "Courier New", monospace;
+}
+.windows {
+  --monaco-monospace-font: Consolas, Inconsolata, "Courier New", monospace;
+}
+.linux {
+  --monaco-monospace-font: "Droid Sans Mono", Inconsolata, "Courier New",
+    monospace, "Droid Sans Fallback";
+}
+
+/* Global Styles */
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 11px;
+  user-select: none;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.se-app {
+  font-size: 13px;
+  line-height: 1.4em;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.se-app img {
+  border: 0;
+}
+
+.se-app label {
+  cursor: pointer;
+}
+
+.se-app a {
+  text-decoration: none;
+}
+
+.se-app a:active {
+  color: inherit;
+  background-color: inherit;
+}
+
+.se-app a.plain {
+  color: inherit;
+  text-decoration: none;
+}
+
+.se-app a.plain:hover,
+.se-app a.plain.hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.se-app input {
+  color: inherit;
+  font-family: inherit;
+  font-size: 100%;
+}
+
+.se-app select {
+  font-family: inherit;
+}
+
+.se-app .pointer {
+  cursor: pointer;
+}
+
+.se-app .monaco-font-aliasing-antialiased {
+  -webkit-font-smoothing: antialiased;
+}
+
+.se-app .monaco-font-aliasing-none {
+  -webkit-font-smoothing: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .se-app .monaco-font-aliasing-auto {
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.se-app .context-view {
+  -webkit-app-region: no-drag;
+}
+
+.se-app .monaco-menu .monaco-action-bar.vertical {
+  padding: 0.5em 0;
+}
+
+.se-app .monaco-menu .monaco-action-bar.vertical .action-menu-item {
+  height: 1.8em;
+}
+
+.se-app
+  .monaco-menu
+  .monaco-action-bar.vertical
+  .action-label:not(.se-appparator),
+.se-app .monaco-menu .monaco-action-bar.vertical .keybinding {
+  font-size: inherit;
+  padding: 0 2em;
+}
+
+.se-app .monaco-menu .monaco-action-bar.vertical .menu-item-check {
+  font-size: inherit;
+  width: 2em;
+}
+
+.se-app
+  .monaco-menu
+  .monaco-action-bar.vertical
+  .action-label.se-appparator {
+  font-size: inherit;
+  padding: 0.2em 0 0 0;
+  margin-bottom: 0.2em;
+}
+
+.se-app.linux
+  .monaco-menu
+  .monaco-action-bar.vertical
+  .action-label.se-appparator {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.se-app .monaco-menu .monaco-action-bar.vertical .submenu-indicator {
+  font-size: 60%;
+  padding: 0 1.8em;
+}
+
+.se-app.linux
+  .monaco-menu
+  .monaco-action-bar.vertical
+  .submenu-indicator {
+  height: 100%;
+  -webkit-mask-size: 10px 10px;
+  mask-size: 10px 10px;
+}
+
+.se-app .monaco-menu .action-item {
+  cursor: default;
+}
+
+/* START Keyboard Focus Indication Styles */
+
+.se-app [tabindex="0"]:focus,
+.se-app .synthetic-focus,
+.se-app select:focus,
+.se-app input[type="button"]:focus,
+.se-app input[type="text"]:focus,
+.se-app textarea:focus,
+.se-app input[type="checkbox"]:focus {
+  outline-width: 1px;
+  outline-style: solid;
+  outline-offset: -1px;
+  opacity: 1 !important;
+}
+
+.se-app [tabindex="0"]:active,
+.se-app select:active,
+.se-app input[type="button"]:active,
+.se-app input[type="checkbox"]:active,
+.se-app
+  .monaco-tree
+  .monaco-tree-row
+  .se-app
+  .monaco-tree.focused.no-focused-item:active:before {
+  outline: 0 !important; /* fixes some flashing outlines from showing up when clicking */
+}
+
+.se-app.mac select:focus {
+  border-color: transparent; /* outline is a square, but border has a radius, so we avoid this glitch when focused (https://github.com/Microsoft/vscode/issues/26045) */
+}
+
+.se-app
+  .monaco-tree.focused
+  .monaco-tree-row.focused
+  [tabindex="0"]:focus {
+  outline-width: 1px; /* higher contrast color for focusable elements in a row that shows focus feedback */
+  outline-style: solid;
+}
+
+.se-app .monaco-tree.focused.no-focused-item:focus:before,
+.se-app .monaco-list:not(.element-focused):focus:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5; /* make sure we are on top of the tree items */
+  content: "";
+  pointer-events: none; /* enable click through */
+  outline: 1px solid; /* we still need to handle the empty tree or no focus item case */
+  outline-width: 1px;
+  outline-style: solid;
+  outline-offset: -1px;
+}
+
+.se-app .synthetic-focus :focus {
+  outline: 0 !important; /* elements within widgets that draw synthetic-focus should never show focus */
+}
+
+.se-app .monaco-inputbox.info.synthetic-focus,
+.se-app .monaco-inputbox.warning.synthetic-focus,
+.se-app .monaco-inputbox.error.synthetic-focus,
+.se-app .monaco-inputbox.info input[type="text"]:focus,
+.se-app .monaco-inputbox.warning input[type="text"]:focus,
+.se-app .monaco-inputbox.error input[type="text"]:focus {
+  outline: 0 !important; /* outline is not going well with decoration */
+}
+
+.se-app .monaco-tree.focused:focus,
+.se-app .monaco-list:focus {
+  outline: 0 !important; /* tree indicates focus not via outline but through the focused item */
+}

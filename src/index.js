@@ -18,13 +18,13 @@ amdRequire.config({
   baseUrl: uriFromPath(path.join(__dirname, '../node_modules/monaco-editor/min'))
 });
 
-amdRequire(['vs/editor/editor.main'], function(monaco) {
-  novel.registerLanguage(monaco);
-  const editor = monaco.editor.create(document.getElementById('container'), {
-    theme: 'myCoolTheme',
-    value: [
-      'hello world!',
-    ].join('\n'),
-    language: 'novel'
-  });
-});
+// amdRequire(['vs/editor/editor.main'], function(monaco) {
+//   novel.registerLanguage(monaco);
+//   const editor = monaco.editor.create(document.getElementById('container'), {
+//     theme: 'myCoolTheme',
+//     value: [
+//       'hello world!',
+//     ].join('\n'),
+//     language: 'novel'
+//   });
+// });

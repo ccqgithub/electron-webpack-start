@@ -9,9 +9,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^4.0.5"
+    "electron": "4.0.5"
   },
   "dependencies": {
-    "monaco-editor": "^0.15.6"
+    "monaco-editor": "0.15.6",
+    "vue": "2.6.8"
   }
 }
