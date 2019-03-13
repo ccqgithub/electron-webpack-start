@@ -2,7 +2,12 @@
 
 > Electron start with webpack
 
-## use 
+## Features 
 
 - [Electron](https://electronjs.org/)
-- [Electron-webpack](https://github.com/electron-userland/electron-webpack)
+- [Electron-Webpack](https://github.com/electron-userland/electron-webpack)
+- [Monaco-Editor](https://github.com/Microsoft/monaco-editor)
+- [Monaco-Editor-Webpack-Plugin](https://github.com/Microsoft/monaco-editor-webpack-plugin)
+- Vue
+- Less
+- Eslint
