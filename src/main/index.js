@@ -1,6 +1,5 @@
 import path from 'path';
 import { app, BrowserWindow } from 'electron';
-import storage from 'electron-json-storage';
 import { format as formatUrl } from 'url';
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
@@ -10,9 +9,6 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 let win;
 
 function createWindow() {
-  const dataPath = storage.getDataPath();
-  console.log(dataPath);
-
   // 创建浏览器窗口。
   win = new BrowserWindow({
     width: 800,

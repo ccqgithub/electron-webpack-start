@@ -25,6 +25,8 @@ module.exports = {
   insertPragma: false,
   // markdown文本换行
   proseWrap: 'preserve',
+  // html
+  htmlWhitespaceSensitivity: 'ignore',
   // overrides
   overrides: [
     {

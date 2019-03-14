@@ -15,8 +15,8 @@ module.exports = {
   plugins: [
     // https://github.com/babel/eslint-plugin-babel
     'babel',
-    // https://github.com/prettier/eslint-plugin-prettier
-    'prettier',
+    'vue',
+    'prettier'
   ],
   extends: [
     // https://github.com/vuejs/eslint-plugin-vue#bulb-rules
@@ -26,8 +26,10 @@ module.exports = {
     'airbnb-base',
 
     // https://github.com/prettier/eslint-plugin-prettier
+    'plugin:prettier/recommended',
     'prettier',
     'prettier/standard',
+    'prettier/vue',
   ],
   env: {
     browser: true,
@@ -72,14 +74,22 @@ module.exports = {
     // 不能在模板里用this
     'vue/this-in-template': 'error',
     // 属性
-    "vue/max-attributes-per-line": ["error", {
-      "singleline": 2,
-      "multiline": {
-        "max": 1,
-        "allowFirstLine": false
-      }
-    }],
+    // "vue/max-attributes-per-line": ["error", {
+    //   "singleline": 2,
+    //   "multiline": {
+    //     "max": 1,
+    //     "allowFirstLine": false
+    //   }
+    // }],
     "vue/singleline-html-element-content-newline": "off",
     "vue/html-self-closing": "off"
-  }
+  },
+  "overrides": [
+    // {
+    //   "files": ["*-test.js","*.spec.js"],
+    //   "rules": {
+    //     "no-unused-expressions": "off"
+    //   }
+    // }
+  ]
 };
