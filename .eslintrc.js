@@ -43,6 +43,8 @@ module.exports = {
     'prettier/prettier': 'warn',
     // 未使用变量
     'no-unused-vars': ['warn', { args: 'none' }],
+    // new
+    'no-new': 'off',
     // 不能使用console
     'no-console': 'off',
     // 禁止使用 javascript: url

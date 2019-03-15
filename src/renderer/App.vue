@@ -93,6 +93,14 @@ export default {
       .then(() => {
         this.loading = false;
         console.log('initEnv');
+        api
+          .getDB()
+          .then((db) => {
+            console.log(db);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
       })
       .catch((error) => {
         console.log(error);

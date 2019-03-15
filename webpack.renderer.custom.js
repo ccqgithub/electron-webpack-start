@@ -1,6 +1,7 @@
 const path = require('path');
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpack = require('webpack');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -35,5 +36,8 @@ module.exports = {
   },
   plugins: [
     new MonacoWebpackPlugin(),
+    new webpack.IgnorePlugin({
+      resourceRegExp: /^worker_threads$/,
+    })
   ]
 }

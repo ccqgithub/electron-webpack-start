@@ -23,14 +23,16 @@ export default new Vuex.Store({
   actions: {
     // 初始化环境
     initEnv({ commit }) {
-      const bookRoot = api.getBookRoot();
-      commit('setBookRoot', bookRoot);
-      return Promise.resolve(bookRoot);
+      return api.getBookRoot().then((bookRoot) => {
+        commit('setBookRoot', bookRoot);
+        return bookRoot;
+      });
     },
     setBookRoot({ commit }, root) {
-      api.setBookRoot(root);
-      commit('setBookRoot', root);
-      return Promise.resolve(root);
+      return api.setBookRoot(root).then(() => {
+        commit('setBookRoot', root);
+        return root;
+      });
     }
   }
 });
