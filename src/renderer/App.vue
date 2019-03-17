@@ -62,7 +62,6 @@
 import * as monaco from 'monaco-editor/esm/vs/editor/editor.api';
 import { mapState, mapActions } from 'vuex';
 import { remote } from 'electron';
-import Store from 'electron-store';
 
 import * as api from './data/api';
 import novel from './lib/language.novel';

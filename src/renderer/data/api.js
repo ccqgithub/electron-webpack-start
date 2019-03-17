@@ -1,5 +1,5 @@
 import path from 'path';
-import fs, { mkdir } from 'fs';
+import fs from 'fs';
 import { remote } from 'electron';
 import Store from 'electron-store';
 import sqlite3 from 'sqlite3';

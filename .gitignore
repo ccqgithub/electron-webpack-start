@@ -1,5 +1,6 @@
-dist/
+out/
 .temp/
 .rn_temp/
+.cache-loader/
 node_modules/
 .DS_Store

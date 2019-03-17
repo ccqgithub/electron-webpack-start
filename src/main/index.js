@@ -14,6 +14,12 @@ function createWindow() {
     width: 800,
     height: 600,
     // titleBarStyle: 'hidden',
+    webPreferences: {
+      contextIsolation: false,
+      nodeIntegration: true,
+      nodeIntegrationInWorker: false,
+      preload: path.join(process.env.APP_ROOT, './main/preload.js')
+    }
   });
 
   if (isDevelopment) {
@@ -21,15 +27,9 @@ function createWindow() {
   }
 
   if (isDevelopment) {
-    win.loadURL(`http://localhost:${process.env.ELECTRON_WEBPACK_WDS_PORT}`);
+    win.loadURL(process.env.APP_URL);
   } else {
-    win.loadURL(
-      formatUrl({
-        pathname: path.join(__dirname, 'index.html'),
-        protocol: 'file',
-        slashes: true,
-      }),
-    );
+    win.loadFile(process.env.APP_URL);
   }
 
   // 当 window 被关闭，这个事件会被触发。

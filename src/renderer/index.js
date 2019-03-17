@@ -2,7 +2,7 @@ import Vue from 'vue';
 import store from './data/store/main';
 import App from './App.vue';
 
-import '../style/index.less';
+import './style/index.less';
 
 // vue devtools
 Vue.config.devtools = process.env.NODE_ENV !== 'production';

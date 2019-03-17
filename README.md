@@ -11,3 +11,7 @@
 - Vue
 - Less
 - Eslint
+
+## 查看 dev server 文件
+
+- http://localhost:8080/webpack-dev-server

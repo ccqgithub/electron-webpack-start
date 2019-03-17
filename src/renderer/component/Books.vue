@@ -2,7 +2,7 @@
   <div class="books">
     <div class="books-area">
       <div class="books-nav">
-        <div>列表1</div>
+        <div>列表</div>
         <div class="act">
           <span class="i iconfont icon-add"></span>
         </div>

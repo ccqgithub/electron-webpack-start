@@ -2,23 +2,34 @@
   "name": "electron-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "src/main.js",
+  "main": "out/main/index.js",
   "scripts": {
-    "dev": "electron-webpack dev",
-    "install-deps": "ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/ npm install && ./node_modules/.bin/electron-rebuild"
+    "help": "electron --help",
+    "dev-server": "cross-env NODE_ENV=development node build/dev-server.js",
+    "dev": "electron .",
+    "build": "cross-env NODE_ENV=production node build/build.js",
+    "install-deps": "ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/ npm install && ./node_modules/.bin/electron-rebuild",
+    "rebuild": "./node_modules/.bin/electron-rebuild"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "7.3.4",
+    "@babel/plugin-proposal-object-rest-spread": "7.3.4",
+    "@babel/plugin-syntax-dynamic-import": "7.2.0",
+    "@babel/preset-env": "7.3.4",
+    "@koa/cors": "3.0.0",
     "autoprefixer": "9.4.10",
     "babel-eslint": "10.0.1",
+    "babel-loader": "8.0.5",
+    "cache-loader": "2.0.1",
+    "copy-webpack-plugin": "5.0.1",
+    "cross-env": "5.2.0",
     "css-hot-loader": "1.4.4",
     "css-loader": "2.1.1",
     "electron": "4.0.5",
     "electron-rebuild": "1.8.4",
-    "electron-store": "^2.0.0",
-    "electron-webpack": "2.6.2",
-    "electron-webpack-vue": "2.2.3",
+    "escape-string-regexp": "1.0.5",
     "eslint": "5.15.1",
     "eslint-config-airbnb": "17.1.0",
     "eslint-config-airbnb-base": "13.1.0",
@@ -27,32 +38,36 @@
     "eslint-plugin-import": "2.16.0",
     "eslint-plugin-prettier": "3.0.1",
     "eslint-plugin-vue": "5.2.2",
+    "html-webpack-place-assets-plugin": "4.0.0",
+    "html-webpack-plugin": "3.2.0",
+    "koa": "2.7.0",
+    "koa-proxy": "0.9.0",
+    "koa-rewrite": "3.0.1",
+    "koa-static": "5.0.0",
+    "koa-webpack-hot": "1.0.2",
     "less": "3.9.0",
     "less-loader": "4.1.0",
     "mini-css-extract-plugin": "0.5.0",
     "monaco-editor-webpack-plugin": "1.7.0",
+    "optimize-css-assets-webpack-plugin": "5.0.1",
     "postcss-loader": "3.0.0",
     "prettier": "1.16.4",
+    "rimraf": "2.6.3",
+    "semver": "5.6.0",
+    "uglifyjs-webpack-plugin": "2.1.2",
+    "url-loader": "1.1.2",
     "vue-loader": "15.7.0",
     "vue-style-loader": "4.1.2",
     "vue-template-compiler": "2.6.9",
-    "webpack": "4.29.6"
+    "webpack": "4.29.6",
+    "webpack-hot-middleware": "2.24.3",
+    "webpack-node-externals": "1.7.2"
   },
   "dependencies": {
-    "electron-json-storage": "4.1.6",
+    "electron-store": "2.0.0",
     "monaco-editor": "0.15.6",
     "sqlite3": "4.0.6",
     "vue": "2.6.9",
     "vuex": "3.1.0"
-  },
-  "electronWebpack": {
-    "commonSourceDirectory": "src/common",
-    "main": {
-      "sourceDirectory": "src/main"
-    },
-    "renderer": {
-      "sourceDirectory": "src/renderer",
-      "webpackConfig": "webpack.renderer.custom.js"
-    }
   }
 }
