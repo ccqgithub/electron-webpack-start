@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="sw">
     <div class="sw-title">
-      神剑码字
+      Electron -start
     </div>
 
     <div class="sw-container">
